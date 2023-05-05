@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Elyora Dior</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const header = document.querySelector("header");
+              window.addEventListener("scroll", function() {
+                header.classList.toggle("sticky", window.scrollY > 0);
+              });
+            });
+
+            function toggleMenu() {
+            var nav = document.getElementById("mynav");
+            if (nav.className === "navigation") {
+                nav.className += " responsive";
+            } else {
+                nav.className = "navigation";
+            }
+        }
+
+        </script>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="portocss.css">
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,900&display=swap" rel="stylesheet">
+
+
+
+    </head>
+    <body>
+        <header>
+            <a ref="#" class="logo"><img src="../img/logome.png"></a>
+            <div class="bx bx-menu" id="menu-icon" onclick="toggleMenu()"></div>
+
+            <ul class="navigation" id="mynav">
+                <li><a href="../Personal Website Elyora.html">Home</a></li>
+                <li><a href="../Personal Website Elyora.html">About</a></li>
+                <li><a href="../experiences/exp.html">Experiences</a></li>
+                <li><a href="./portofolio_utama.html">Portofolio</a></li>
+                <li><a href="../contactt/contactsme.php">Contact</a></li>
+            </ul>
+            <!----- <a href="#" class="top-btn">Download CV</a> -->
+        </header>
+
+        <section class="portofolio" id="portofolio">
+            <h1 class="heading">My Portofolio</h1>
+            <p> <i class='bx bx-info-circle'> </i> Hover images for more information about my work</p><br>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="../img/porto1/pic1.png" alt="">
+                    <h4>Project 1</h4>
+                    <div class="icons">
+                        <a href="../portofolio/porto1.html"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="../img/porto2/piccover.jpg" alt="">
+                    <h4>Project 2</h4>
+                    <div class="icons">
+                        <a href="../portofolio/porto2.html"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="../img/porto3/cover3.png" alt="">
+                    <h4>Project 3</h4>
+                    <div class="icons">
+                        <a href="../portofolio/porto3.html"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="../img/porto4/cover4.png" alt="">
+                    <h4>Project 4</h4>
+                    <div class="icons">
+                        <a href="../portofolio/porto4.html"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="../img/porto5/pic1.png" alt="">
+                    <h4>Project 5</h4>
+                    <div class="icons">
+                        <a href="../portofolio/porto5.html"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer> created by Elyora Dior | © All Rights Reserved!</footer>
+
+    </body>
+</html>

@@ -1,0 +1,298 @@
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    
+}
+
+:root{
+    --background-color: #fff;
+    --text-color: #000;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    background-color: antiquewhite;
+    color: var(--text-color)
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 18%;
+    transition: .3s;
+}
+
+header.sticky{
+    background-color: #fff;
+    padding: 13px 18%;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.logo img{
+    max-width: 100%;
+    width: 90px;
+    height: auto;
+}
+
+.navigation{
+    display: flex;
+}
+
+.navigation li{
+    position: relative;
+    padding: 10px;
+}
+
+.navigation a{
+    font-size: var(--p-font);
+    color: #000;
+    font-weight: 500;
+    padding: 20%;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: pink;
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+}
+
+.navigation a:hover::after{
+    width: 100%;
+}
+
+#menu-icon{
+    font-size: 35px;
+    color:#000;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* start */
+.navigation.responsive {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f9f3ea;
+    z-index: 1;
+}
+
+.navigation.responsive li {
+    text-align: center;
+    border-bottom: 2px solid pink;
+}
+
+.navigation.responsive li:last-child {
+    border-bottom: none;
+}
+
+.bx-menu {
+    display: block;
+}
+/* end */
+
+section{
+    padding: 200px 18%;
+}
+
+/* Contact !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.contact{
+    background-color: antiquewhite;
+    
+}
+
+.contact h1{
+    font-size: 70px;
+}
+
+.contact .icons-container{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.contact .icons-container .icons{
+    flex: 1 1 10rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1rem gray;
+    border-radius: 0.5rem;
+}
+
+.contact .icons-container .icons i{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    background-color:rgb(112, 76, 55);
+    color: white;
+    border-radius: 50%;
+}
+
+.contact .icons-container .icons h4{
+    color: black;
+    font-size: 20px;
+    padding: .5rem 0;
+}
+
+.contact .icons-container .icons p{
+    color:rgb(47, 31, 31);
+    font-size: 15px;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row form{
+    flex: 1 1 20rem;
+    background-color: white;
+    padding: 0 2rem;
+    box-shadow: 0 0.5rem 1rem gray;
+    border-radius: .5rem;
+}
+
+.contact .row .map{
+    flex: 1 1 10rem;
+    border: 1rem solid white;
+    box-shadow: 0 0.5rem 1rem gray;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.contact .row form .box , .contact .row form textarea{
+    width: 100%;
+    border: .5px solid rgb(176, 176, 176);
+    border-radius: .5rem;
+    color: #6b3535;
+    text-transform: none;
+    font-size: 15px;
+    padding: 5%;
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact .row form .box:focus , .contact .row form textarea:focus{
+    border-color: white;
+    resize: none;
+}
+
+.contact .row .btn{
+    display: inline-block;
+    color:rgb(255, 255, 255);
+    background-color: rgb(112, 76, 55);
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+footer{
+    margin-top: 2rem;
+    font-size: 25px;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: #6b3535;
+    background: #fff;
+}
+
+@media screen and (max-width: 1425px){
+    .navigation li{
+        display: block;
+        margin: 10px 0;
+      }
+      .navigation a{
+        padding: 20px;
+        font-size: 16px;
+      }
+ }
+
+
+
+ @media screen and (max-width: 1425px) and (min-width: 600px) {
+    .navigation a {
+      width: 120px;
+      padding: 20px 10px;
+      font-size: 16px;
+    }
+
+
+  }
+
+
+ @media screen and (max-width: 600px){
+/* Header */
+    .contact{
+        padding: 200px 18%;;
+    }
+    #menu-icon{
+    display: block;
+    }
+    header{
+        padding: 16px 3%;
+        transition: .3s;
+    }
+    header.sticky{
+        padding: 16px 3%;
+        transition: .3s;
+    }
+    section{
+        padding: 70px 10%;
+        transition: .3s;
+    }
+    .navigation{
+        position: absolute;
+        top: -600px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #fff;
+        transition: all .40s;
+    }    
+    .navigation a{
+        display: block;
+        padding: .1rem;
+        margin: .5rem;
+        border-right: 2px solid pink;
+        color:rgb(112, 76, 55)
+    }
+    .navigation a:hover{
+        background-color: antiquewhite;
+        color:#6b3535;
+    }
+    .navigation a::after{
+        display: none;
+    }
+    .navigation.active{
+        top: 100%;
+    }
+
+}
